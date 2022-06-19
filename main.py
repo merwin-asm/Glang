@@ -73,7 +73,7 @@ Docs:
 
 import os
 import sys
-import Parser
+import Converter
 from rich import print
 from rich.panel import Panel
 from rich.table import Table
@@ -157,7 +157,7 @@ VERSION  = "1.0.0"
 
 
 def Run_Glang(path,args):
-    Parser.Parser(path)
+    Converter.Parser(path)
     file_ =str(path).split("/")
     file_org = file_.pop()
     while True:
