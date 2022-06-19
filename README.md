@@ -1,2 +1,2 @@
 # Glang
-A simple programming lang for beginner game devs.
+A programming lang ment for game dev.
