@@ -57,15 +57,15 @@ def uninstall():
 
 def update():
     uninstall()
-    if os.path.exists("Glang"):
-        if os.path.isdir("Glang"):
-            for e in os.listdir("Glang"):
-                os.remove(f"Glang/{e}")
-            os.rmdir(f"Glang")
+    if os.path.exists("Glang_SRC"):
+        if os.path.isdir("Glang_SRC"):
+            for e in os.listdir("Glang_SRC"):
+                os.remove(f"Glang_SRC/{e}")
+            os.rmdir(f"Glang_SRC")
         else:
-            os.remove("Glang")
-    os.system("git clone https://github.com/mastercodermerwin/Glang.git")
-    os.system("cd Glang")
+            os.remove("Glang_SRC")
+    os.system("git clone https://github.com/mastercodermerwin/Glang.git Glang_SRC")
+    os.system("cd Glang_SRC")
     os.system("sudo python3 Installer.py")
 
 if os.path.exists(target_paste):
