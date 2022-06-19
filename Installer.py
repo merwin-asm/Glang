@@ -55,26 +55,11 @@ def uninstall():
     delete_Glang_dir()
     os.remove("/usr/bin/Glang")
 
-def update():
-    uninstall()
-    if os.path.exists("Glang_SRC"):
-        if os.path.isdir("Glang_SRC"):
-            for e in os.listdir("Glang_SRC"):
-                os.remove(f"Glang_SRC/{e}")
-            os.rmdir(f"Glang_SRC")
-        else:
-            os.remove("Glang_SRC")
-    os.system("git clone https://github.com/mastercodermerwin/Glang.git Glang_SRC")
-    os.system("cd Glang_SRC")
-    os.system("sudo python3 Installer.py")
-
 if os.path.exists(target_paste):
-    cmd = input("Glang have been already installed. Do You want to Uninstall then enter `u` , if you want to make no change enter `n`  , if you want a update enter `t` [n/t/u] ?")
+    cmd = input("Glang have been already installed. Do You want to Uninstall then enter `u` or if you want to make no change enter `n` . [n/u] ?")
 
     if cmd == "n":
         pass
-    elif cmd == "t":
-        update()
     elif cmd == "u":
         uninstall()
 else:
