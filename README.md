@@ -1,6 +1,6 @@
 
 # Glang
-A lang ment for game dev.
+A lang meant for game dev.
 
 <p align="right"> <img src="https://komarev.com/ghpvc/?username=merwin-glang&label=Project%20views&color=0e75b6&style=flat" alt="darkmash-org" /> </p>
 
